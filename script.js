@@ -2,35 +2,37 @@ const text = document.querySelector(".title");
 const strText = text.textContent;
 const splitText = strText.split("");
 console.log(splitText);
-text.textContent="";
+text.textContent = "";
 
-for (let i=0; i <splitText.length; i++){
+for (let i = 0; i < splitText.length; i++) {
     text.innerHTML += "<span class='startAnimation'>" + splitText[i] + "</span>"
 }
 
 let char = 0;
 let timer = setInterval(onTick, 150);
 
-function onTick(){
+function onTick() {
     const span = text.querySelectorAll("span")[char];
     span.classList.add("fade");
     char++;
-    if (char === splitText.length){
-complete();
-return;
+    if (char === splitText.length) {
+        complete();
+        return;
 
     }
 }
 
-function complete(){
+function complete() {
     clearInterval(timer);
     timer = null;
 }
-/*
+
 const hero = document.querySelector(".hero");
 
-const keyframes1 = [{height:"0%"}, {height:"100%"}];
-const keyframes2 = [{width: "40%"}, {width: "100%"} ];
+const keyframes1 = [{ height: "0%" }, { height: "100%" }];
+const keyframes2 = [{ width: "40%" }, { width: "100%" }];
+
+
 
 hero.animate(keyframes1, {
     duration: 1000,
@@ -46,31 +48,33 @@ hero.animate(keyframes2, {
     direction: "normal",
     iterations: 1,
 
-})*/
-/*
-function scrollAppear(){
+})
+
+function scrollAppear() {
     let section = [document.querySelector(".sectiona"), document.querySelector(".sectionb"), document.querySelector(".sectionc"), document.querySelector(".sectiond"),]
 
-    let screenPosition = window.innerHeight /2;
-for(i=o; i < section.length; i++){
-     let introPosition = section[i].getBoundingClientRect().top
+    let screenPosition = window.innerHeight / 2;
+    for (i = 0; i < section.length; i++) {
+        let introPosition = section[i].getBoundingClientRect().top
 
 
-    if (introPosition < screenPosition){
-        section[i].classList.add("section-appear");}
+        if (introPosition < screenPosition) {
+            section[i].classList.add("section-appear");
+        }
     }
 }
 
-window.addEventListener("scroll", scrollAppear)*/
+window.addEventListener("scroll", scrollAppear)
 
-let section = [document.querySelector(".sectiona"),document.querySelector(".sectionb"),document.querySelector(".sectionc"), document.querySelector(".sectiond")];
-var screenPosition = window.innerHeight /2;
+let section = [document.querySelector(".sectiona"), document.querySelector(".sectionb"), document.querySelector(".sectionc"), document.querySelector(".sectiond")];
+var screenPosition = window.innerHeight / 2;
 
-function scrollAppear(){
-for (i=0; i<section.length; i++){
-  let introPosition = section[i].getBoundingClientRect().top;
-  if(introPosition < screenPosition){
-    section[i].classList.add("section-appear")
-  }
-}};
+function scrollAppear() {
+    for (i = 0; i < section.length; i++) {
+        let introPosition = section[i].getBoundingClientRect().top;
+        if (introPosition < screenPosition) {
+            section[i].classList.add("section-appear")
+        }
+    }
+};
 window.addEventListener("scroll", scrollAppear);
