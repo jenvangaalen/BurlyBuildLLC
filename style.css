@@ -63,6 +63,7 @@ body {
   transition: 0.5s all ease-in-out;
   transform: translateY(-20px);
   display: flex;
+   flex-direction: column;
   color: white;
   justify-content: center;
   align-items: center;
