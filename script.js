@@ -26,7 +26,7 @@ function complete(){
     clearInterval(timer);
     timer = null;
 }
-
+/*
 const hero = document.querySelector(".hero");
 
 const keyframes1 = [{height:"0%"}, {height:"100%"}];
@@ -46,7 +46,7 @@ hero.animate(keyframes2, {
     direction: "normal",
     iterations: 1,
 
-})
+})*/
 /*
 function scrollAppear(){
     let section = [document.querySelector(".sectiona"), document.querySelector(".sectionb"), document.querySelector(".sectionc"), document.querySelector(".sectiond"),]
