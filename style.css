@@ -23,7 +23,6 @@ body {
   position: relative; 
 }
 
-/* Title styling */
 .title {
   position: absolute; 
   top: 70%;
@@ -31,7 +30,6 @@ body {
   font-size: 3rem;
   padding: 1rem; 
   color: #fff;
-  transform: translateX(-5%);
 }
 
 /* Hero image styling */
@@ -46,9 +44,11 @@ body {
 .navigation {
   text-align: center;
   padding: 1rem 0;
+  background-color: #fff;
 }
 
 .navigation a {
+  display: inline-block;
   margin: 0 0.5rem;
   text-decoration: none;
   color: #333;
@@ -56,17 +56,25 @@ body {
   font-size: 20px;
 }
 
+.navigation p {
+  margin-top: 1rem;
+}
+
 /* Section styles */
+.content-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 .sectiona, .sectionb, .sectionc, .sectiond {
   opacity: 0;
   transition: 0.5s all ease-in-out;
   transform: translateY(-20px);
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
 }
 
 .sectiona, .sectionc {
@@ -85,12 +93,13 @@ body {
 }
 
 .content h2 {
-  font-size: 40px;
+  font-size: 2rem;
   margin-bottom: 15px;
 }
 
 .content {
   padding: 0 1rem;
+  text-align: center;
 }
 
 /* Image styling */
@@ -135,4 +144,3 @@ body {
     font-size: 1.5rem;
   }
 }
-
