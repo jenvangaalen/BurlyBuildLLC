@@ -42,6 +42,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-bottom: 15px solid #fff;
+  margin-bottom: 2rem;
 }
 
 /* Navigation styling */
@@ -80,7 +81,7 @@ body {
   flex-wrap: wrap; /* Ensure items wrap on small screens */
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 1rem;
   margin-bottom: 2rem; /* Add spacing between sections */
 }
 
