@@ -23,7 +23,7 @@ body {
 
 .hero {
   width: 100%;
-  position: absolute; 
+  position: relative; 
 }
 
 .title {
@@ -128,7 +128,7 @@ body {
 @media (max-width: 768px) {
   .title {
     font-size: 1.8rem;
-    top: 60%; /* Adjust title position for smaller screens */
+    top: 10%; /* Adjust title position for smaller screens */
     left: 10%; /* Adjust title position for smaller screens */
   }
 
