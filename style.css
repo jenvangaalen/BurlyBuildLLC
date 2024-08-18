@@ -1,14 +1,16 @@
-*{
+/* Apply zero margin and padding globally and set default font */
+* {
   margin: 0;
   padding: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif; 
 }
 
+/* Body styling */
 body {
   background: #9a9a9a;
-
 }
 
+/* Section 1 styling */
 #section1 {
   display: flex;
   height: 100vh;
@@ -17,11 +19,11 @@ body {
 }
 
 .hero {
-  height: 100%;
   width: 100%;
   position: relative; 
 }
 
+/* Title styling */
 .title {
   position: absolute; 
   top: 70%;
@@ -29,121 +31,108 @@ body {
   font-size: 3rem;
   padding: 1rem; 
   color: #fff;
+  transform: translateX(-5%);
 }
 
-.startAnimation {
-  opacity: 0;
-  transition: all 0.4s ease;
-
-
-}
-
-.fade{
-  opacity: 1;
-}
-
-.hero img{
+/* Hero image styling */
+.hero img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-bottom: 15px solid #fff;
 }
 
-.navigation 
-{
- margin: 0 0.5rem;
-  justify-items: center;
+/* Navigation styling */
+.navigation {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.navigation a {
+  margin: 0 0.5rem;
+  text-decoration: none;
+  color: #333;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
 }
 
-.sectiona {
+/* Section styles */
+.sectiona, .sectionb, .sectionc, .sectiond {
   opacity: 0;
   transition: 0.5s all ease-in-out;
   transform: translateY(-20px);
   display: flex;
-  color: white;
   justify-content: center;
   align-items: center;
   padding: 2rem;
-
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.sectiona, .sectionc {
+  color: white;
+  background: #333; /* Optional: background color for visibility */
+}
 
-.content h2{
+.sectionb, .sectiond {
+  color: black;
+  background-color: white;
+}
+
+.sectionb .content, .sectiond .content {
+  padding-left: 2rem; 
+  padding-right: 0;
+}
+
+.content h2 {
   font-size: 40px;
   margin-bottom: 15px;
-
 }
 
-.content{
-  padding-right: 1rem;
+.content {
+  padding: 0 1rem;
 }
 
-.image{
+/* Image styling */
+.image {
   width: 100%;
   height: auto;
   max-width: 500px; 
 }
 
-.sectionb {
-  opacity: 0;
-  transition: 0.5s all ease-in-out;
-  transform: translateY(-20px);
-  background-color: white;
-  display: flex;
-  color: black;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-.sectionb .content {
-  padding-left: 2rem; 
-  padding-right: 0px; 
-}
-
-
-.sectionc {
-  opacity: 0;
-  transition: 0.5s all ease-in-out;
-  transform: translateY(-20px);
-  display: flex;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-.sectiond {
-  opacity: 0;
-  transition: 0.5s all ease-in-out;
-  transform: translateY(-20px);
-  background-color: white;
-  display: flex;
-  color: black;
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-.sectiond .content {
-  padding-left: 2rem; 
-  padding-right: 0px; 
-}
-
-
-.section-appear{
+/* Show section with animation */
+.section-appear {
   opacity: 1;
-  transform: translateY(0px);
+  transform: translateY(0);
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .title {
     font-size: 1.8rem;
+  }
+
+  .navigation {
+    padding: 1rem;
   }
 
   .navigation a {
     display: block;
     margin: 0.5rem 0;
   }
+
+  .sectiona, .sectionb, .sectionc, .sectiond {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .sectiona .content, .sectionb .content, .sectionc .content, .sectiond .content {
+    padding: 0;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+  }
+}
+
